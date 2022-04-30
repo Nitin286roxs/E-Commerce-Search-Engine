@@ -1,0 +1,57 @@
+{
+  "settings": {
+    "number_of_shards": 2,
+    "number_of_replicas": 1
+  },
+   "mappings": {
+    "dynamic": "true",
+    "_source": {
+      "enabled": "true"
+    },
+    "properties" : {
+        "brand" : {
+          "type" : "keyword"
+        },
+        "categories" : {
+          "type" : "text"
+        },
+        "description" : {
+          "type" : "text"
+        },
+        "free_shipping" : {
+          "type" : "keyword"
+        },
+        "image" : {
+          "type" : "keyword"
+        },
+        "name" : {
+          "type" : "text"
+        },
+        "name_vector": {
+        "type": "dense_vector",
+        "dims": 512
+        },
+        "objectID" : {
+          "type" : "long"
+        },
+        "popularity" : {
+          "type" : "long"
+        },
+        "price" : {
+          "type" : "double"
+        },
+        "price_range" : {
+          "type" : "keyword"
+        },
+        "rating" : {
+          "type" : "long"
+        },
+        "type" : {
+          "type" : "keyword"
+        },
+        "url" : {
+          "type" : "keyword"
+        } 
+    }
+  }
+}
