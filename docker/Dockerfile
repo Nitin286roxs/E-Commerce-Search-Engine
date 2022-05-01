@@ -6,9 +6,9 @@ RUN yum update -y && \
         python36u-libs \
         python36u-devel \
         python36u-pip \
-        git && \
-    yum clean all
-WORKDIR /usr/Nitin286roxs/
-COPY requirements.txt /usr/
-RUN git clone https://github.com/Nitin286roxs/E-Commerce-Search-Engine.git && \
-    python3.6 -m pip install -r /usr/requirements.txt
+    && yum clean all
+COPY data/ /app/data/
+COPY src/ /app/src/
+COPY requirements.txt /app/
+WORKDIR /app/
+RUN python3.6 -m pip install -r /app/requirements.txt

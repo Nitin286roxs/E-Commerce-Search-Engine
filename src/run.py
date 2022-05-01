@@ -166,7 +166,7 @@ class TextEmbedd:
             print()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Creating instance of TextEmbedd class
     text_embedd_obj = TextEmbedd()
     # Loading pretrained  model
